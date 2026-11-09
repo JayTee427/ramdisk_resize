@@ -1,0 +1,127 @@
+﻿[
+    {
+        "Test":  "T1 VerifyOnly on copy",
+        "Result":  "PASS",
+        "Detail":  "exit 0"
+    },
+    {
+        "Test":  "T6a live image refused while RAMDisk runs",
+        "Result":  "PASS",
+        "Detail":  "exit 1"
+    },
+    {
+        "Test":  "T6b leftover state file refused (and not deleted)",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T6c configured drive present refused",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T6d GUI/console process running refused",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T6e registry/image size mismatch refused",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T6f dirty configured image refused even with -Force",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T6g new size not larger refused",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Copy -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Prepare -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Mount -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after CheckBefore -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Grow -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after CheckAfter -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Dismount -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Finalize -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Verify -\u003e undone",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Swap -\u003e undone (resized kept as .resized-rejected)",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T4 fail after Registry -\u003e undone (resized kept as .resized-rejected)",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "T2 resize 6-\u003e8 GiB: image, registry, backup, state, manifest",
+        "Result":  "PASS",
+        "Detail":  "exit 0; length 8590196784; registry 2097152/2097152; phase done"
+    },
+    {
+        "Test":  "T2 VerifyOnly after resize",
+        "Result":  "PASS",
+        "Detail":  "exit 0"
+    },
+    {
+        "Test":  "T2 second run refused while results are pending",
+        "Result":  "PASS",
+        "Detail":  "exit 1"
+    },
+    {
+        "Test":  "T3 result mounts read-only, chkdsk clean, contents = manifest",
+        "Result":  "PASS",
+        "Detail":  "chkdsk exit 0; volume 8.00 GiB; 32673 files; manifest match True"
+    },
+    {
+        "Test":  "T5 rollback restores original bytes and registry",
+        "Result":  "PASS",
+        "Detail":  "hash same; leftovers []; registry 1572864/1572864; attached 0"
+    },
+    {
+        "Test":  "Live config untouched, R: still present, source backup unchanged",
+        "Result":  "PASS",
+        "Detail":  "live SizeIn4kPages 1572864; R: True"
+    }
+]

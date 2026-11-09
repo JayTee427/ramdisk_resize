@@ -1,0 +1,64 @@
+﻿Setup in D:\Claude\ramdisk\testrun (fake DiskDrive Q:\)
+T1 VerifyOnly
+[PASS] T1 VerifyOnly on copy  exit 0
+T6 refusals
+[PASS] T6a live image refused while RAMDisk runs  exit 1
+[PASS] T6b leftover state file refused (and not deleted)  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T6c configured drive present refused  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T6d GUI/console process running refused  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T6e registry/image size mismatch refused  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T6f dirty configured image refused even with -Force  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T6g new size not larger refused  hash same; leftovers []; registry 1572864/1572864; attached 0
+T4 failure injection
+[PASS] T4 fail after Copy -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Prepare -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Mount -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after CheckBefore -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Grow -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after CheckAfter -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Dismount -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Finalize -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Verify -> undone  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Swap -> undone (resized kept as .resized-rejected)  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] T4 fail after Registry -> undone (resized kept as .resized-rejected)  hash same; leftovers []; registry 1572864/1572864; attached 0
+T2 full run (pretend-live via test key)
+[PASS] T2 resize 6->8 GiB: image, registry, backup, state, manifest  exit 0; length 8590196784; registry 2097152/2097152; phase done
+[PASS] T2 VerifyOnly after resize  exit 0
+[PASS] T2 second run refused while results are pending  exit 1
+T3 independent mount of the result
+[PASS] T3 result mounts read-only, chkdsk clean, contents = manifest  chkdsk exit 0; volume 8.00 GiB; 32673 files; manifest match True
+T5 rollback
+[PASS] T5 rollback restores original bytes and registry  hash same; leftovers []; registry 1572864/1572864; attached 0
+[PASS] Live config untouched, R: still present, source backup unchanged  live SizeIn4kPages 1572864; R: True
+
+Test                                                                 Result Detail                                                          
+----                                                                 ------ ------                                                          
+T1 VerifyOnly on copy                                                PASS   exit 0                                                          
+T6a live image refused while RAMDisk runs                            PASS   exit 1                                                          
+T6b leftover state file refused (and not deleted)                    PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T6c configured drive present refused                                 PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T6d GUI/console process running refused                              PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T6e registry/image size mismatch refused                             PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T6f dirty configured image refused even with -Force                  PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T6g new size not larger refused                                      PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Copy -> undone                                         PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Prepare -> undone                                      PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Mount -> undone                                        PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after CheckBefore -> undone                                  PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Grow -> undone                                         PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after CheckAfter -> undone                                   PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Dismount -> undone                                     PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Finalize -> undone                                     PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Verify -> undone                                       PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Swap -> undone (resized kept as .resized-rejected)     PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T4 fail after Registry -> undone (resized kept as .resized-rejected) PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+T2 resize 6->8 GiB: image, registry, backup, state, manifest         PASS   exit 0; length 8590196784; registry 2097152/2097152; phase done 
+T2 VerifyOnly after resize                                           PASS   exit 0                                                          
+T2 second run refused while results are pending                      PASS   exit 1                                                          
+T3 result mounts read-only, chkdsk clean, contents = manifest        PASS   chkdsk exit 0; volume 8.00 GiB; 32673 files; manifest match True
+T5 rollback restores original bytes and registry                     PASS   hash same; leftovers []; registry 1572864/1572864; attached 0   
+Live config untouched, R: still present, source backup unchanged     PASS   live SizeIn4kPages 1572864; R: True                             
+
+
+
+25 passed, 0 failed. Per-run output in D:\Claude\ramdisk\testrun\out
